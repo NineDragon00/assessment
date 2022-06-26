@@ -4,6 +4,13 @@ const assessmentButton = document.getElementById('assessment');
 const resultDivided = document.getElementById('result-area');
 const tweetDivided = document.getElementById('tweet-area');
 
+
+userNameInput.onkeydown = event => {
+  if (event.key === 'Enter') {
+    assessmentButton.onclick();
+  }
+};
+
 assessmentButton.onclick = () => {
   const userName = userNameInput.value;
   if (userName.length === 0) {
@@ -41,11 +48,6 @@ assessmentButton.onclick = () => {
   tweetDivided.appendChild(script);
 };
 
-userNameInput.onkeydown = event => {
-  if (event.key === 'Enter') {
-    assessmentButton.onclick();
-  }
-};
 
 
 const answers = [
