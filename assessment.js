@@ -80,6 +80,12 @@ function assessment(userName) {
   return result;
 }
 
+userNameInput.onkeydown = event => {
+  if (event.key === 'Enter') {
+    assessmentButton.onclick();
+  }
+};
+
 // テストコード
 console.assert(
   assessment('太郎') ===
